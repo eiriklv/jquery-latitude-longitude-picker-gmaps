@@ -230,7 +230,12 @@ var GMapsLatLonPicker = (function() {
 	return publicfunc;
 });
 
-$(document).ready( function() {
+//$(document).ready( function() {
+//	$(".gllpLatlonPicker").each(function() {
+//		(new GMapsLatLonPicker()).init( $(this) );
+//	});
+//});
+$(document).on('renderPicker', function() {
 	$(".gllpLatlonPicker").each(function() {
 		(new GMapsLatLonPicker()).init( $(this) );
 	});
